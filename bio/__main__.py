@@ -45,7 +45,7 @@ def _process_images(images_dir: Path, optimised_dir: Path, dpi: int = 72, max_ve
                     if height > max_vector:
                         img = img.resize((int(max_vector * img.width / img.height), max_vector))
 
-            img.save(optimised_dir / f"{image.stem}_optimised.{ext}", ext)
+            img.save(optimised_dir / f"{image.stem}_optimised.{ext}")
 
             img.close()
 
